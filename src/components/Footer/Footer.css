@@ -1,0 +1,27 @@
+.footer{
+    width: 100%;
+    height: 21rem;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 2rem;
+    background-color: #DFDFF4;
+    clip-path: ellipse(97% 100% at 50% 100%);
+}
+
+
+.footerClip{
+    width: 100%;
+    height: 20rem;
+    background-image: url(https://rockstheme.com/rocks/live-roboart/img/blog/b2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    clip-path: ellipse(97% 100% at 50% 100%);
+}
+
+.innerFooterClip{
+    width: 100%;
+    height: 20rem;
+    clip-path: ellipse(97% 100% at 50% 100%);
+    background: linear-gradient(270deg, rgba(2, 0, 36, 0.9) 0%, rgba(9, 9, 121, 0.9) 35%, rgba(0,212,255,0.9) 100%);
+}

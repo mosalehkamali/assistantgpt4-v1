@@ -1,0 +1,244 @@
+.home-main{
+    background-image: url(https://rockstheme.com/rocks/live-roboart/img/background/bg.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+.BGcolor{
+    background-color: #1a1566de;
+    background: linear-gradient(270deg, rgba(2, 0, 36, 0.9) 0%, rgba(9, 9, 121, 0.9) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+}
+
+.clip-path{
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    clip-path: ellipse(63% 46% at 0% 57%);
+}
+
+.mainTitle{
+    direction: rtl;
+    position: relative;
+    font-family: Shabnam;
+    font-size: 1.8rem;
+    color: #444444;
+    width: 30rem;
+    top: 15rem;
+    left: 5rem;
+}
+
+.mainTitle>h2{
+    margin: 0 ;
+}
+
+.mainTitle>P{
+    font-size: 1.2rem;
+  
+}
+
+.mainTitle>span{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.mainTitle>span>svg{
+    height: 1.5rem;
+    color: #fff;
+    background-color: #760EEC;
+    padding: 3px;
+    margin-left: 0.5rem;
+}
+
+@keyframes moveImage {
+    0%{
+      transform: translateY(22rem);
+    }
+
+    100%{transform: translateY(0rem);}
+  }
+@keyframes spinImage {
+    0%{
+      transform:translateY(0em) rotate(0);
+    }
+    100% {
+        transform:translateY(0) rotate(-360deg);
+    }
+  }
+
+.main-img{
+    width: 30rem;
+    top: 18rem;
+    right: 1rem;
+    position: absolute;
+    z-index: 999;
+    animation:moveImage 2s ease-out   ;
+}
+
+.maingptlogo{
+    width: 15rem;
+    right: 9rem;
+    top: 2rem;
+    margin-top: 3rem;
+    animation: none;
+    animation:spinImage 2s ease-out   ;
+}
+
+#explaneContaner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #DFDFF4;
+}
+
+.expImage{
+    width: 50%;
+    margin-left: 5rem;
+}
+
+@keyframes rotateInfinite {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.rotatenCercal{
+    height:28rem;
+    animation: rotateInfinite 30s linear infinite;
+}
+
+.explaneRobote{
+    position: absolute;
+    z-index: 999;
+    height: 25rem;
+}
+
+.axplaneContent{
+    z-index: 999;
+    background-color: #fff;
+    margin-right: 5rem;
+    height: 35rem;
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.axplanText{
+    direction: rtl;
+    font-family: Shabnam;
+    color: #444444;
+    z-index: 999;
+    margin-right: 5rem;
+    width: 35rem; 
+  
+}
+
+.axplanTextContent{
+    text-indent: 1em;
+    width: 30rem;
+    margin: 0.5rem;   
+}
+
+.expClip{
+    clip-path: ellipse(100% 74% at 100% 100%);
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+#servicesContaner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+
+.servicesContent{
+    direction: rtl;
+    color: #fff;
+    font-family: Shabnam;
+    z-index: 999;
+    margin-right: 5rem;
+    width: 35rem;
+}
+
+.contentTitle{
+    font-size: 2rem;
+    
+}
+
+.servicesTextContent{
+    text-indent: 1em;
+    width: 30rem;
+    margin: 0.5rem;
+}
+.servClip{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #DFDFF4;
+    clip-path: ellipse(100% 81% at 67% 0%);
+}
+.innerServClip{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    clip-path: ellipse(100% 78% at 78% 0%);
+
+}
+@keyframes moveServImage {
+    0%{
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(1rem);
+    }
+    100%{transform: translateY(0);}
+  }
+.servisesImg{ z-index: 1000;
+    height: 40rem;
+    animation:moveServImage 3s ease-out infinite  ;}
+
+.pricingPlans{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px #DFDFF4 solid;
+}
+
+/* News section */
+.news{
+    width: 100%;
+    height: 25rem;
+    background-image: url(https://rockstheme.com/rocks/live-roboart/img/services/s1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.newsOver{
+    width: 100%;
+    height: 25rem;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.7) 0%, rgba(9, 9, 121, 0.7) 35%, rgba(0,212,255,0.7) 100%);
+    color: #fff;
+    font-family: Shabnam;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}

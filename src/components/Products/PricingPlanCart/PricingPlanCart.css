@@ -1,0 +1,84 @@
+.PricingPlanCart {
+    width: 22rem;
+    height: 33rem;
+    border-radius: 3px;
+    border: 0.2px #dfdff49a solid;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.PricingPlanCart:hover{
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.PricingPlanCart:hover .priceClip{
+    opacity: 1;
+}
+
+.priceClip {
+    position: absolute;
+    width: 22rem;
+    height: 12rem;
+    clip-path: ellipse(100% 79% at 1% 7%);
+    border-radius: 3px;
+    opacity: 0.1;
+    transition: all 0.3s ease;
+}
+
+.PricingPlanCart:hover .priceCartHeader{
+    color: #fff;
+}
+
+.priceCartHeader {
+    z-index: 1000;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #888e94;
+}
+
+
+.plan-title {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.plan-price {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-right: 8rem;
+}
+
+.plan-attributes {
+    font-family: Shabnam;
+    color: #888e94;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buyingBtn{
+    font-family: Shabnam;
+    text-decoration: none;
+    background:#760EEC;
+    color: #fff;
+    font-size: 1.3rem;
+    padding:0.5rem 2rem 0.5rem 2rem ;
+    margin-bottom: 2rem;
+    border: 0.2px #760EEC solid;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.buyingBtn:hover{
+    background-color:transparent;
+    color: #760EEC;
+}

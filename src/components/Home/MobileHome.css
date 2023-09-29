@@ -1,0 +1,114 @@
+@media only screen and (max-width: 900px){
+    /* main section */
+    .main-img{
+        display: none;
+    }
+    .mainTitle{
+        z-index: 1000;
+        height: auto;
+        width: 80%;
+        left: 5px;
+        top: 19rem;
+        font-size: 1rem;
+    }
+    .clip-path{
+        clip-path: ellipse(100% 46% at 0% 57%);
+    }
+    /* services section */
+    #servicesContaner{
+        flex-direction: column;
+        height: auto;
+    }
+    .servClip{
+        height: auto;
+        clip-path: ellipse(100% 81% at 67% 100%);
+    }
+    .innerServClip{
+        height: 140vh;
+        clip-path: ellipse(100% 78% at 78% 100%);
+    }
+    .servisesImg{
+        height: auto;
+        width: 100%;
+    }
+    .servicesContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        height: auto;
+        width: 70%;
+    }
+
+    .servicesTextContent{
+        width: 100%;
+        padding-left: 10rem;
+        font-size: 12px;
+    }
+    /* explane section  */
+    #explaneContaner{
+        flex-direction: column;
+    }
+    .expImage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin: 0px;
+    }
+
+    .axplaneContent{
+        direction: rtl;
+        height: auto;
+        width: 70%;
+        margin-right: 0rem;
+    }
+
+    .axplanTextContent{
+        width: 70%;
+        padding-left: 0rem;
+        font-size: 12px;
+    }
+
+    .axplanText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        height: auto;
+        width: 70%;
+    }
+   
+    .expClip{
+        height: 100%;
+    }
+    .explaneRobote{
+        height: auto;
+        width: 68%;
+    }
+    .rotatenCercal{
+        height: auto;
+        width: 68%;
+    }
+    .axplaneContent{
+        display: block;
+        width: 90%;
+        margin: 0px;
+        margin-bottom: 3rem;
+    }
+
+    /* pricing plan section  */
+    .pricingPlans{
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+    }
+    /* news section */
+    .news{
+        margin-top: 15rem;
+    }
+}
+

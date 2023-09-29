@@ -1,0 +1,15 @@
+.HomeNavLink{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Shabnam';
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.HomeNavBtn{
+    transition: all 0.2s ease;
+}
+
+.HomeNavBtn:hover{
+    transform: translateY(-5px);
+}

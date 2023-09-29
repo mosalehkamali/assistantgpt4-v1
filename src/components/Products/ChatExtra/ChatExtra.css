@@ -1,0 +1,166 @@
+.Chat3Pro{
+    background-image: url(../../assets/pattern-v1.png);
+    background-size: 7rem;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backColor{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000c2;
+    font-family: 'Poppins';
+}
+
+.ChatBotTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #565869;
+    font-size: 4rem;
+    height: 30vh;
+}
+
+.message{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    bottom: 2rem;
+}
+
+.messageInput{
+    position: absolute;;
+    width: 70%;
+    outline: none;
+    height:1.5rem;
+    padding: 1rem;
+    background-color: #40414F;
+    border: 1px solid #15151a;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.sendMessageBtn{
+    position: relative;
+    left: 39%;
+    background-color: transparent;
+    padding: 0%;
+    border:none ;
+    cursor: pointer;
+}
+
+.sendMessageBtn>svg{
+    height: 3.5rem;
+    width: 3.5rem;
+    color: #A469F1;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.sendMessageBtn>svg:hover{
+    color: #fff;
+    background-color: #A469F1;
+}
+
+.chatBox{
+    direction: ltr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #fff;
+    justify-content: start;
+}
+
+.messages{
+width: 100%;
+}
+
+.responses{
+width: 83%;
+margin-left: 12%;
+margin-right: 5%;
+display: flex;
+justify-content: end;
+align-items: flex-end;
+}
+
+.response{
+    direction: ltr;
+    word-wrap: break-word;
+}
+
+.chatmessage{
+    width: 90%;
+display: flex;
+}
+
+.clientMessage{
+    margin:0.5rem 4rem 0.5rem 4rem ;
+    max-width: 100vw;
+    word-wrap: break-word;
+    background-color:  #7E6DD1;
+    padding:0.5rem 1rem 0.5rem 1rem ;
+    border-radius: 10px;
+}
+
+.serverResponse{
+    direction: rtl;
+    margin:0;
+    padding: 1rem;
+    background-color:#1F1F1F;
+    max-width: 100vw;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.resHeader{
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+
+#chatsvg{
+    height:1.5rem !important;    
+    width: 1.5rem !important;
+    background-color:#01CFFC ;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 1rem;
+}
+
+.copyBtn{
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 5px;
+    height: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    border: none;
+}
+
+.bottomGap{
+    height: 12rem;
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 900px){
+    .clientMessage{
+        margin:0.5rem 1.2rem 0.5rem 1.2rem ;
+        max-width: 100vw;
+        word-wrap: break-word;
+    }
+    .sendMessageBtn{
+        left: 32%;
+    }
+}
+

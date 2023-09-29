@@ -1,0 +1,79 @@
+.HomeNav{
+    height: 12vh;
+    width: 100%;
+    z-index: 1001;
+    position: fixed;
+    transition: all 0.5S ease;
+}
+
+.NavContent{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.NavbarBtns{
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    gap: 3rem;
+    width:auto;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+.Navlogo-name {
+padding: 0.5rem 1rem 1rem 5rem;
+}
+
+.assistantGPT{
+    width: 15rem;
+}
+
+.profileBtn{
+    text-decoration: none;
+    display: flex !important ;
+    justify-content: center! important;
+    align-items:center;
+    border-radius: 10px 10px 10px 10px ;
+    font-family: 'Shabnam';
+    font-size: 1rem;
+    width: 12rem;
+    height: 2.5rem;
+    color: #01CFFC;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+    border: 4px #fff solid;
+}
+
+.profileBtn>svg{
+    height: 2rem;
+}
+
+@media only screen and (max-width: 900px){
+   
+    .Navlogo-name{
+        padding: 0;
+    }
+
+    .HomeNavBtn{
+        display: none;
+    }
+   
+    .Navlogo-name> img{
+        width: 8rem;
+        padding-top: 1rem;
+    }
+
+    .profileBtn{
+        margin-top: 1rem;
+        width: 5rem;
+        font-size: 0.5rem;
+    }
+    .profileBtn{
+        height: 1.5rem;
+    }
+}

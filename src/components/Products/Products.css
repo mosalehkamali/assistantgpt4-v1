@@ -1,0 +1,80 @@
+.Products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extraGpt{
+    direction: rtl;
+    width: 80%;
+    height: 30vh;
+    margin: 2rem 0rem 0rem 0rem;
+    border: 0.2px #dfdff49a solid;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    transition: all 0.3s ease;
+}
+
+.extaClip{
+    position: absolute;
+    background-color: #760EEC;
+    border-radius: 5px;
+    width: 80%;
+    height: 30vh;
+    color: #fff;
+    clip-path: ellipse(100% 66% at 93% 0%);
+    transition: all 0.3s ease;
+}
+
+.extra-title{
+    font-weight: 200;
+    font-size: 1.5rem;
+    font-family: Poppins;
+    margin: 1rem 2rem 0rem 0rem;
+}
+
+.extraPlan{
+    display: block;
+    font-family: Shabnam;
+    margin-right: 2rem;
+    width: 30rem ;
+}
+
+.extraBtn{
+    z-index: 999;
+    cursor: pointer;
+    text-align: center;
+    font-family: Shabnam;
+    text-decoration: none;
+    color: #888e94;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    transition: all 0.2s ease;
+}
+
+.extraBtn>svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.extraBtn:hover{
+    color: #760EEC;
+}
+
+@media only screen and (max-width: 750px){
+.extraPlan{
+    width: 15rem;
+}
+    .extraBtn{
+    margin-bottom: 1rem;
+}
+}

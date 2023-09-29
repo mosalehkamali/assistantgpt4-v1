@@ -1,0 +1,120 @@
+.ExtraNav {
+    font-family: Poppins;
+    height: 10vh;
+    width: 100%;
+    z-index: 1001;
+    position: fixed;
+    background-color: #40414F;
+}
+
+.extraNavContent {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.extraNavBtns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+.EnavBtn {
+    background: transparent;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2S ease;
+}
+
+.EnavBtn:hover {
+    color: #760EEC;
+    font-size: 3;
+    transform: scale(1.05);
+}
+
+.EnavBtn>svg {
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 50%;
+}
+
+.requests {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reqText {
+    color: #FFF;
+    font-size: 1.2rem;
+}
+
+.reqNumber {
+    color: #FFF;
+    font-size: 1.2rem;
+    border: 2px #fff solid;
+    border-radius: 5px;
+    padding: 0 0.5rem 0 0.5rem;
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+
+.Chat-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #760EEC;
+    margin-right: 5rem;
+}
+
+/* timer styles */
+.timerContent {
+    position: absolute;
+    top: 65vh;
+    height: 35vh;
+    background: linear-gradient(transparent 10%, #40414F 40% );
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: #fff;
+}
+
+.timeCounter{
+font-size: 2rem;
+}
+
+.timer-text{
+    margin-bottom: 10vh;
+    font-family: Shabnam;
+}
+
+@media only screen and (max-width: 750px){
+    .ExtraNav{
+        height: auto;
+    }
+    .extraNavContent{
+        flex-direction: column-reverse;
+        height: auto;
+        
+    }
+
+    .Ebackbtn{
+        display: none;
+    }
+    .EnavBtn{
+        margin-bottom: 1rem;
+    }
+
+    .Chat-name{
+        display: none;
+    }
+
+}
