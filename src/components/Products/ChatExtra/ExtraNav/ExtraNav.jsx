@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ExtraNav.css";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function ExtraNav({ clearChat }) {
   const navigate = useNavigate();
@@ -27,6 +28,11 @@ function ExtraNav({ clearChat }) {
       .then((data) => {
         // Handle the data returned by the API
         if (data.time) {
+          Swal.fire(
+            '!شارژ رایگان حساب شما تمام شده',
+            'لطفا تا شارژ مجدد صبر کنید',
+            'error'
+          )
           setTimerStyle({ display: "flex" });
           setRequests("0");
 
