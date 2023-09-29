@@ -41,7 +41,7 @@ function HomeNav() {
       <div className="NavContent">
         <div className="Navlogo-name">
           <img
-            src="./img/assistantGPT.png"
+            src="http://assistantgpt4.com/assistantGPT.png"
             alt="assistantGPT"
             className="assistantGPT"
           />

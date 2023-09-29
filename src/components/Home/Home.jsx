@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Home.css";
 import "./MobileHome.css";
 import { Link } from "react-router-dom";
-import PricingPlanCart from "../Products/PricingPlanCart/PricingPlanCart";
 import Footer from "../Footer/Footer";
 import HomeNav from "../HomeNav/HomeNav";
 
@@ -21,13 +20,13 @@ function Home() {
       {/* main section */}
       <div className="home-main">
         <div className="BGcolor">
-          <img className="main-img" src="./img/GPT.png" alt="main-img" />
+          <img className="main-img" src="http://assistantgpt4.com/GPT.png" alt="main-img" />
           <img
             className="main-img maingptlogo"
-            src="./img/GPTlogo.png"
+            src="http://assistantgpt4.com/GPTlogo.png"
             alt="main-img"
           />
-          <img className="main-img" src="./img/assistant.png" alt="main-img" />
+          <img className="main-img" src="http://assistantgpt4.com/assistant.png" alt="main-img" />
           <div className="clip-path">
             <div className="mainTitle">
               <span>
