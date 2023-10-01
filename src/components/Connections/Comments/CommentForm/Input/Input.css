@@ -1,0 +1,19 @@
+.input{
+    font-family: Shabnam;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.personinfo{
+    font-family: Shabnam;
+    width: 100%;
+    background: #fff;
+    padding: 8px 15px;
+    border: 1px solid #e1e1e1;
+    min-height: 40px;
+}

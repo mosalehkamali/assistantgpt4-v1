@@ -3,7 +3,9 @@ import "./Home.css";
 import "./MobileHome.css";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Connection from "../Connections/Connection";
 import HomeNav from "../HomeNav/HomeNav";
+import Product from "../Product/Product"
 
 function Home() {
   const [loading, setLoading] = useState("loader");
@@ -176,7 +178,18 @@ function Home() {
           </div>
         </div>
         {/* pricing plan section */}
+        <div className="homeArticlePlan">
+        <div className="homeArticlePlanTitle">
+            تازه ترین مقاله ها
+        </div>
+        <div className="pricingPlans">
 
+          <Product></Product>
+          <Product></Product>
+          <Product></Product>
+        </div>
+
+        </div>
         {/* news section */}
         <div className="news">
           <div className="newsOver">
@@ -184,6 +197,8 @@ function Home() {
             <br /> .قسمت اخبار هنوز در دسترس نیست
           </div>
         </div>
+        {/* connections */}
+        <Connection></Connection>
         {/* footer */}
         <Footer></Footer>
       </div>

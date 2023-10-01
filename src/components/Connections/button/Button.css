@@ -1,0 +1,20 @@
+.notactive{
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+    color: #666;
+    padding:0.5rem 1rem  0.5rem 1rem ;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.active{
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+    background-color: #01CFFC;
+    color: #fff;
+    padding:0.6rem 1rem  0.6rem 1rem ;
+    border-radius: 5px;
+    text-decoration: none;
+}

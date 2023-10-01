@@ -1,0 +1,51 @@
+.comment{
+    display: flex;
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 1.25rem;
+}
+
+.comment-user{
+    margin-left:1.25rem ;
+}
+
+.comment-user>svg{
+    color: #AAAAAA ;
+    width: 5rem;
+}
+
+.comment-detail{
+    padding-bottom: 0.625rem;
+}
+
+.user-name{
+    text-transform: uppercase;
+    color: #232323;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.post-info ul{
+    display: flex;
+    padding: 0px;
+}
+
+.date{
+    margin-left: 1rem;
+    color: #666666;
+    font-weight: 500;
+    line-height:1.56rem;
+    font-size: 0.875rem;
+}
+
+.answer{
+    cursor: pointer;
+    text-decoration: none;
+    color: #6d6d6d;
+    transition: all 0.2s ease-in-out;
+}
+
+.answer:hover{
+    color: rgb(255, 48, 48) ;
+}
+

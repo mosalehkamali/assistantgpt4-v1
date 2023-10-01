@@ -126,6 +126,7 @@
     z-index: 999;
     background-color: #fff;
     margin-right: 5rem;
+    margin-top: 2rem;
     height: auto;
     width: 35rem;
     padding: 1rem;
@@ -203,8 +204,29 @@
     height: 100vh;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     clip-path: ellipse(100% 78% at 78% 0%);
+}
+
+
+
+.homeArticlePlan{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5f9317d72cc97f5572a7fd8a/ca0eeaf9-01db-4ca7-9225-86d1ecd6003a/Copy+of+Copy+of+TBD+Changing+the+Conversation+Graphic.png);
+    background-size: cover;
+    margin-top: 10rem;
 
 }
+
+.homeArticlePlanTitle{
+    text-align: center;
+    color: #444444;
+    border-bottom:1px  #444444 solid;
+    font-family: Shabnam;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+
 @keyframes moveServImage {
     0%{
       transform: translateY(0);
@@ -219,7 +241,6 @@
     animation:moveServImage 3s ease-out infinite  ;}
 
 .pricingPlans{
-    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;

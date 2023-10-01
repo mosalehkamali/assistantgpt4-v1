@@ -36,7 +36,7 @@ function Products() {
         <div className="extaClip">
           <h4 className="extra-title">Extra GPT</h4>
           <span className="extraPlan">
-            دسترسی راحت و رایگان به Chat GPT4 ،با درک دو زبانه فارسی و اینگلیسی،
+            دسترسی راحت و رایگان به Chat GPT4 ،با درک دو زبانه فارسی و انگلیسی،
             بدون نیاز به شماره تلفن.
           </span>
         </div>

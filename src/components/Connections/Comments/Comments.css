@@ -1,0 +1,16 @@
+.comments{
+    padding: 1.25rem 0 1.25rem 0;
+}
+
+.commentCounter{
+    color: #1b2839;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0.625rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+
+.commentChild{
+    margin-right: 4rem;
+}

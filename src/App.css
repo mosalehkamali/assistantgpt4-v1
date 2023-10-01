@@ -34,6 +34,8 @@ html {
 * {
   scrollbar-width: thin; /* Width of the scrollbar */
   scrollbar-color: #008faf #090979; /* Foreground and background color of the scrollbar */
+  outline: none ;
+  list-style: none;
 }
 
 .loader {

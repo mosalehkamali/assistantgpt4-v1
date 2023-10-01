@@ -210,7 +210,9 @@ function ChatExtra() {
                             <path d="M3 7.6v12.8c0 .4.2.8.5 1.1.3.3.7.5 1.1.5h9.8" />
                             <path d="M15 2v5h5" />
                           </svg>
+                          <div className="copyBtnText">
                           !Copy
+                          </div>
                         </button>
                         <button
                           className="copyBtn"
@@ -240,7 +242,9 @@ function ChatExtra() {
                             />
                             <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
                           </svg>
+                          <div className="copyBtnText">
                           !Attachment
+                          </div>
                         </button>
                       </div>
 

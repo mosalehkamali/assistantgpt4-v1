@@ -1,0 +1,22 @@
+
+
+  .connections{
+    font-family: Shabnam;
+    direction: rtl;
+    padding:4.37rem 0 4.37rem 0;
+    margin-left: 5.6rem;
+    margin-right: 5.6rem;
+  }
+
+  .boxButton{
+    border-bottom: 1px solid #e1e1e1
+  }
+
+  .ulButtons{
+    display: flex;
+    padding-bottom: 1.225rem;
+  }
+
+  .container{
+    border-bottom: 1px solid #e1e1e1
+  }

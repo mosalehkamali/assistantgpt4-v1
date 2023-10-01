@@ -1,0 +1,45 @@
+.product{
+    direction: rtl;
+    width: 17rem;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 7rem;
+    font-family: Shabnam;
+}
+
+.HomeProductTitle{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.HomeProductDescription{
+    padding: 1rem;
+    color: gray;
+}
+
+.HomeProductImg{
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+}
+
+.HomeProductBtn{
+    font-family: Shabnam;
+    font-size: 1rem;
+    border: none;
+    background-color: #01CCF9;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+    width: 100%;
+    height: 4rem;
+    padding: 12px;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.HomeProductBtn:hover{
+    background-color: #025669;
+}
