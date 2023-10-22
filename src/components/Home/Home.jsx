@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Connection from "../Connections/Connection";
 import HomeNav from "../HomeNav/HomeNav";
-import Product from "../Product/Product"
+import Product from "../Product/Product";
+import HomeChat from "./HomeChat/HomeChat";
 
 function Home() {
   const [loading, setLoading] = useState("loader");
@@ -20,7 +21,7 @@ function Home() {
       <div className={loading}></div>
       <HomeNav></HomeNav>
       {/* main section */}
-      <div className="home-main">
+      <div className="home-main ">
         <div className="BGcolor">
           <img className="main-img" src="http://assistantgpt4.com/GPT.png" alt="main-img" />
           <img
@@ -63,6 +64,8 @@ function Home() {
             </div>
           </div>
         </div>
+        {/* Chat section */}
+        <HomeChat></HomeChat>
         {/*  services section */}
         <div id="servicesContaner">
           <div className="servClip">

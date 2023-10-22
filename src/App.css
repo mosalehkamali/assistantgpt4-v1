@@ -11,6 +11,7 @@ html {
   src: url('/public/fonts/Shabnam-Medium.ttf') format('truetype');
 }
 
+
 /* For Webkit browsers like Chrome, Safari */
 ::-webkit-scrollbar {
   width:10px; /* Width of the scrollbar */

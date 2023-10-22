@@ -1,152 +1,125 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef ,useEffect } from "react";
 import copy from "clipboard-copy";
-import "./ChatExtra.css";
-import ExtraNav from "./ExtraNav/ExtraNav";
 import Swal from "sweetalert2";
 
-function ChatExtra() {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
-  const [memory, setMemory] = useState("");
+const HomeChat = () => {
+    const [messages, setMessages] = useState([]);
+    const [input, setInput] = useState("");
+    const [memory, setMemory] = useState("");
+  
+    const [chatData, setChatData] = useState([]);
+    const token = JSON.parse(localStorage.getItem("A-gpt4Token"));
+    const [key, setKey] = useState(0);
+  
+    const chatBoxRef = useRef(null);
+  
+    useEffect(() => {
+      if (chatBoxRef.current) {
+        chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
+      }
+    }, [chatData]);
 
-  const [chatData, setChatData] = useState([]);
-  const token = JSON.parse(localStorage.getItem("A-gpt4Token"));
-  const [key, setKey] = useState(0);
 
-  // previous chats
-
-  useEffect(() => {
-    fetch("https://assistantgpt4.com/post/posts_for/", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token.token}`,
-        "Content-Type": "application/json",
-      },
-    })
+    const handleInputChange = (e) => {
+      setInput(e.target.value);
+    };
+  
+    function memoryBtn(e) {
+      setMemory(e.target.parentElement.nextSibling.textContent);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+  
+      Toast.fire({
+        icon: "success",
+        title: "Saved to memory attachment successfully",
+      });
+    }
+  
+    function handleCopyClick(e) {
+      copy(e.target.parentElement.nextSibling.textContent);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+  
+      Toast.fire({
+        icon: "success",
+        title: "Copied successfully",
+      });
+    }
+    
+    function sendMessage() {
+      setChatData([
+        ...chatData,
+        { message: input, response: '' },
+      ]);
+      // if (chatBoxRef.current) {
+      //   chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
+      // }
+      fetch("http://assistantgpt4.com/post/", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token.token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: input,
+          author: token.username,
+          memory: `{1_message:${memory}}`,
+        }),
+      })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        return response.json(); // Parse the response as JSON
+        return response.json();
       })
       .then((data) => {
-        // Handle the data returned by the API
-        let newChatData = [...chatData];
-
-        data.forEach((prevChat) => {
-          newChatData.push({
-            message: prevChat.content,
-            response: prevChat.response_gpt,
-          });
+        setChatData([
+          ...chatData,
+          { message: data.content, response: data.response_gpt },
+        ]);
+        })
+        .then(
+          setTimeout(() => {
+            setKey((prevKey) => prevKey + 1);
+          }, 5000)
+        )
+        .catch((error) => {
+          console.error("Error:", error);
         });
-
-        newChatData = newChatData.reverse();
-        setChatData(newChatData);
-        window.scrollTo(0, document.body.scrollHeight);
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during the fetch
-        console.error("Fetch error:", error);
-      });
-  }, []);
-
-  const handleInputChange = (e) => {
-    setInput(e.target.value);
-  };
-
-  function memoryBtn(e) {
-    setMemory(e.target.parentElement.nextSibling.textContent);
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener("mouseenter", Swal.stopTimer);
-        toast.addEventListener("mouseleave", Swal.resumeTimer);
-      },
-    });
-
-    Toast.fire({
-      icon: "success",
-      title: "Saved to memory attachment successfully",
-    });
-  }
-
-  function handleCopyClick(e) {
-    copy(e.target.parentElement.nextSibling.textContent);
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 2000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener("mouseenter", Swal.stopTimer);
-        toast.addEventListener("mouseleave", Swal.resumeTimer);
-      },
-    });
-
-    Toast.fire({
-      icon: "success",
-      title: "Copied successfully",
-    });
-  }
-  
-  function sendMessage() {
-    setChatData([
-      ...chatData,
-      { message: input, response: '' },
-    ]);
-    window.scrollTo(0, document.body.scrollHeight);
-    fetch("http://assistantgpt4.com/post/", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token.token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        content: input,
-        author: token.username,
-        memory: `{1_message:${memory}}`,
-      }),
-    })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
+      if (input) {
+        setMessages([...messages, { text: input }]);
+        setInput("");
       }
-      return response.json();
-    })
-    .then((data) => {
-      setChatData([
-        ...chatData,
-        { message: data.content, response: data.response_gpt },
-      ]);
-      window.scrollTo(0, document.body.scrollHeight);
-      })
-      .then(
-        setTimeout(() => {
-          setKey((prevKey) => prevKey + 1);
-        }, 5000)
-      )
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-    if (input) {
-      setMessages([...messages, { text: input }]);
-      setInput("");
     }
-  }
+  
+    function clearChat() {
+      setChatData([]);
+    }
+  
 
-  function clearChat() {
-    setChatData([]);
-  }
 
   return (
-    <div className="Chat3Pro">
-      {<ExtraNav clearChat={clearChat} key={key}></ExtraNav>}
-      <div className="backColor">
+    <div className='homeChat'>
+         <div className="w-full h-screen bg-gradient-to-r from-sky-500 to-indigo-500 flex justify-center items-center flex-col">
+      <div ref={chatBoxRef} id="homeChatBox" className="bg-gradient-to-r from-purple-500 to-pink-500  w-11/12 h-4/5 rounded-md overflow-auto">
         <h2 className="ChatBotTitle">Chat Extra</h2>
         <div className="chatBox">
           <div className="messages">
@@ -252,10 +225,10 @@ function ChatExtra() {
             })}
           </div>
         </div>
-        <div className="bottomGap"></div>
-        <div className="message">
+          </div>
+        <div className="w-full flex justify-center">
           <input
-            className="messageInput"
+            className="w-96"
             onChange={handleInputChange}
             onKeyDown={(e) => {
               if (e.keyCode === 13) {
@@ -266,7 +239,7 @@ function ChatExtra() {
             type="text"
             placeholder="Send a message"
           />
-          <button onClick={sendMessage} className="sendMessageBtn">
+          <button onClick={sendMessage} className="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -277,9 +250,11 @@ function ChatExtra() {
             </svg>
           </button>
         </div>
-      </div>
     </div>
-  );
+
+
+    </div>
+  )
 }
 
-export default ChatExtra;
+export default HomeChat
